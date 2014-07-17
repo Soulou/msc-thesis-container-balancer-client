@@ -43,5 +43,16 @@ def stop(obj, all, container_host, container_ids):
 def migrate(obj, container_host, container_ids):
     obj['client'].migrate(container_host, container_ids)
 
+@client.command()
+@click.pass_obj
+@click.argument("node", nargs=1)
+def node_status(obj, node):
+    obj['client'].node_status(node)
+
+@client.command()
+@click.pass_obj
+def nodes_status(obj):
+    obj['client'].nodes_status()
+
 if __name__ == '__main__':
     client(obj={})
