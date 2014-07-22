@@ -12,12 +12,12 @@ def status(self):
 
     nodes = json.loads(r.text)
 
-    t = PrettyTable(["Node", "Port", "Service", "ID", "Created At"])
+    t = PrettyTable(["Node", "Port", "Service", "Image", "ID", "Created At"])
     t.align["Node"] = "l"
     t.padding_width = 1
 
     for node, containers in nodes.iteritems():
         for c in containers:
-            t.add_row([node, c["Ports"][0]["PublicPort"], c['Names'][0].split("-")[0][1:], c["Id"][0:15], timestamp_to_time(c["Created"])])
+            t.add_row([node, c["Ports"][0]["PublicPort"], c['Names'][0].split("-")[0][1:], c["Image"], c["Id"][0:15], timestamp_to_time(c["Created"])])
 
     print(t)

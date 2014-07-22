@@ -21,20 +21,24 @@ def status(obj):
     
 @client.command()
 @click.pass_obj
+@click.option("--image", default=None)
 @click.argument("service", nargs=1)
-def start(obj, service):
-    obj['client'].start(service)
+def start(obj, service, image):
+    obj['client'].start(service, image)
 
 @client.command()
 @click.pass_obj
 @click.option("--all", default=False, is_flag=True)
-@click.argument("container_host", nargs=1)
+@click.option("--service", default=None)
+@click.option("--host", default=None)
 @click.argument("container_ids", nargs=-1)
-def stop(obj, all, container_host, container_ids):
+def stop(obj, all, service, host, container_ids):
+    if service != None:
+        obj['client'].stop_service(service)
     if all:
-        obj['client'].stop_all(container_host)
+        obj['client'].stop_all(host)
     else:
-        obj['client'].stop(container_host, container_ids)
+        obj['client'].stop(host, container_ids)
 
 @client.command()
 @click.pass_obj

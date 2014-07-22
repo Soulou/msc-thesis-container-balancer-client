@@ -8,6 +8,7 @@ from .nodes_status import *
 
 Client.start = start
 Client.stop = stop
+Client.stop_service = stop_service
 Client.stop_all = stop_all
 Client.status = status
 Client.migrate = migrate
