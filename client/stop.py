@@ -20,7 +20,7 @@ def stop_service(self, service):
         return
 
     containers = json.loads(r.text)
-    for host, containers in containers.iteritems():
+    for host, containers in containers.items():
         service_containers = []
         for c in containers:
             if c['Names'][0].split("-")[0][1:] == service:

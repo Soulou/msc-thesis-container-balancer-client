@@ -26,7 +26,7 @@ def start(self, service, image=None):
         puts("→ Image: {}".format(container['Config']['Image']))
 
         port_bindings = container["NetworkSettings"]["Ports"]
-        for remote_port, bindings in port_bindings.iteritems():
+        for remote_port, bindings in port_bindings.items():
             port = bindings[0]["HostPort"]
             break
         puts("→ Port: {}".format(port))
