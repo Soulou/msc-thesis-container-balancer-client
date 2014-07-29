@@ -8,7 +8,7 @@ import requests
 import json
 
 def nodes_status(self):
-    r = requests.get("http://{}:{}/nodes-status".format(self.host, self.port))
+    r = requests.get("http://{}:{}/nodes/status".format(self.host, self.port))
     if r.status_code != 200:
         puts(colored.red("Invalid response from server: {} - {}".format(r.status_code, r.text)))
         return
