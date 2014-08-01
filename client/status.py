@@ -18,6 +18,9 @@ def status(self):
 
     for node, containers in nodes.items():
         for c in containers:
-            t.add_row([node, c["Ports"][0]["PublicPort"], c['Names'][0].split("-")[0][1:], c["Image"], c["Id"][0:15], timestamp_to_time(c["Created"])])
+            port = c["Ports"][0]["PublicPort"]
+            service = c['Names'][0].split("-")[0][1:]
+            id = c["Id"][0:15]
+            t.add_row([node, port, service, c["Image"], id, timestamp_to_time(c["Created"])])
 
     print(t)
