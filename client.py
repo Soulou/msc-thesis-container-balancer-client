@@ -18,6 +18,14 @@ def client(obj, host, port):
 @click.pass_obj
 def status(obj):
     obj['client'].status()
+
+@client.command()
+@click.pass_obj
+@click.argument("container_host", nargs=1)
+@click.argument("container_ids", nargs=-1)
+def container_status(obj, container_host, container_ids):
+    for cid in container_ids:
+        obj['client'].container_status(container_host, cid)
     
 @client.command()
 @click.pass_obj
