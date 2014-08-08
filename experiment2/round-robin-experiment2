@@ -1,0 +1,42 @@
+Service1 Requests/sec:     12.94
+Service2 Requests/sec:     22.49
+Service3 Requests/sec:     92.88
+
+Service1 Requests/sec:     13.75
+Service2 Requests/sec:     23.51
+Service3 Requests/sec:     97.92
+
+Service1 Requests/sec:     13.24
+Service2 Requests/sec:     23.12
+Service3 Requests/sec:     73.41
+
+Service1 Requests/sec:     13.76
+Service2 Requests/sec:     23.33
+Service3 Requests/sec:     93.75
+
+Service1 Requests/sec:     12.90
+Service2 Requests/sec:     22.83
+Service3 Requests/sec:     82.26
+
+> service1 = c(12.94, 13.75, 13.24, 13.76, 12.90)
+> summary(service1)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  12.90   12.94   13.24   13.32   13.75   13.76 
+> sd(service1)
+[1] 0.4200238
+
+> service2 = c(22.49, 23.51, 23.12, 23.33, 22.83)
+> summary(service2)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  22.49   22.83   23.12   23.06   23.33   23.51 
+> sd(service2)
+[1] 0.4051913
+
+> service3 = c(92.88, 97.92, 73.41, 93.75, 82.26)
+> summary(service3)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  73.41   82.26   92.88   88.04   93.75   97.92 
+> sd(service3)
+[1] 10.01361
+
+
