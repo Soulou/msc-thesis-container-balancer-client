@@ -6,6 +6,7 @@ from .migrate import *
 from .node_status import *
 from .nodes_status import *
 from .container_status import *
+from .balance import *
 
 Client.start = start
 Client.stop = stop
