@@ -7,8 +7,11 @@ from clint.textui import puts, indent, colored
 import requests
 import json
 
-def balance(self, strategy):
+def balance(self, strategy, opts):
     payload = {}
+    if opts != None:
+        payload["opts"] = ";".join(opts)
+
     if strategy != None: 
         payload["strategy"] = strategy
 
