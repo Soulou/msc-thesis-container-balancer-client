@@ -63,6 +63,12 @@ def node_status(obj, node):
 
 @client.command()
 @click.pass_obj
+@click.argument("strategy", nargs=1, default=None)
+def balance(obj, strategy):
+    obj['client'].balance(strategy)
+
+@client.command()
+@click.pass_obj
 def nodes_status(obj):
     obj['client'].nodes_status()
 

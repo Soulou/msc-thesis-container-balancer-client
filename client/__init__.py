@@ -16,3 +16,4 @@ Client.migrate = migrate
 Client.node_status = node_status
 Client.nodes_status = nodes_status
 Client.container_status = container_status
+Client.balance = balance
