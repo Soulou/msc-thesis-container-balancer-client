@@ -1,0 +1,103 @@
+Service1 Requests/sec:      9.72
+Service2 Requests/sec:     15.05
+Service3 Requests/sec:     60.62
+
+Service1 Requests/sec:      9.45
+Service2 Requests/sec:     17.11
+Service3 Requests/sec:     57.18
+
+s1: 0.97
+s2: 1.14
+s3: 0.94
+
+Average: +2%
+
+'mapping': [0, 1, 0, 1, 3, 0, 2, 3, 3, 2]}}
+
+Migrations: 6
+
+---------------
+
+Service1 Requests/sec:      8.82
+Service2 Requests/sec:     15.37
+Service3 Requests/sec:     57.69
+
+Service1 Requests/sec:      9.43
+Service2 Requests/sec:     14.18
+Service3 Requests/sec:     73.31
+
+s1: 1.07
+s2: 0.92
+s3: 1.27
+
+Average: +7%
+
+'mapping': [2, 1, 0, 0, 2, 2, 1, 1, 2, 2]}}
+
+Migrations: 7
+
+---------------
+
+Service1 Requests/sec:     10.25
+Service2 Requests/sec:     15.52
+Service3 Requests/sec:     57.62
+
+Service1 Requests/sec:     12.19
+Service2 Requests/sec:     17.95
+Service3 Requests/sec:     65.62
+
+s1: 1.19
+s2: 1.16
+s3: 1.14
+
+Average: +16%
+
+'mapping': [0, 2, 1, 1, 2, 3, 3, 2, 0, 3]}}
+
+Migrations: 6
+
+---------------
+
+Service1 Requests/sec:      9.70
+Service2 Requests/sec:     14.86
+Service3 Requests/sec:     54.15
+
+Service1 Requests/sec:     11.31
+Service2 Requests/sec:     17.96
+Service3 Requests/sec:     81.85
+
+s1: 1.17
+s2: 1.21
+s3: 1.51
+
+Average: +30%
+
+'mapping': [0, 1, 3, 2, 3, 2, 2, 0, 3, 1]}}
+
+Migrations: 6
+
+--------------
+
+Service1 Requests/sec:      9.71
+Service2 Requests/sec:     15.13
+Service3 Requests/sec:     75.25
+
+Service1 Requests/sec:     11.21
+Service2 Requests/sec:     16.68
+Service3 Requests/sec:     75.28
+
+s1: 1.15
+s2: 1.10
+s3: 1.00
+
+Average: +8%
+
+'mapping': [2, 1, 3, 2, 2, 2, 1, 0, 3, 0]}}
+
+Migrations: 9
+
+=============
+
+Average: +12.6%
+NbNodes: 4
+Migrations: 6.8
